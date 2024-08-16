@@ -1,0 +1,224 @@
+/* CSS RESET */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+ 
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+#root {
+    width: auto;   
+}
+
+/* STYLE */
+body {
+    background-image: url(public/images/headerBackground.png);
+    background-repeat:no-repeat;
+    background-position:top center;
+    background-attachment:local;
+}
+
+.container {
+    width: 375px;
+    margin: 0 auto;
+    padding: 0px 24px;
+}
+
+.headerSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.container h1 {
+    color: #FFFFFF;
+    height: 40px;
+    padding: 0px 0.86px 0px 0px;
+}
+
+.todoForm {
+    margin-bottom: 16px;
+    box-shadow: 0px 35px 50px -15px #C2C3D680;
+}
+
+.todoForm input {
+    border: none;
+    width: 270px;
+    padding: 14px 20px 14px 0px;
+    background-color: #FFFFFF;
+    border-radius: 0px 12px 12px 0px;
+}
+
+.todoForm button {
+    border: none;
+    padding: 14px;
+    background-color: #FFFFFF;
+    border-radius: 12px 0px 0px 12px;
+}
+
+.todoListSection {
+    background-color: #FFFFFF;
+    border-radius: 12px;
+    box-shadow: 0px 35px 50px -15px #C2C3D680;
+    margin-bottom: 16px;
+}
+
+.todoListSection li {
+    padding: 16px 20px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 400;
+    line-height: 12px;
+    letter-spacing: -0.1666666716337204px;
+    text-align: left;
+    color: #494C6B;
+}
+
+.todoTask {
+    display: flex;
+    align-items: center;
+}
+
+.todoCheck {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 12px;
+    cursor: pointer;
+}
+
+.todoCheck {
+    display: inline-block;
+    position: relative;
+    padding-left: 24px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    user-select: none;
+}
+
+.todoCheck input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.todoCheck .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    border: 1px solid black;
+    transition: background 0.2s, box-shadow 0.2s;
+}
+
+.todoCheck:hover input ~ .checkmark {
+    background: linear-gradient(135deg, #55DDFF 0%, #C058F3 100%);
+    border: none;
+}
+
+.todoCheck input:checked ~ .checkmark {
+    background: linear-gradient(135deg, #55DDFF 0%, #C058F3 100%);
+    box-shadow: 0 0 5px rgba(0, 128, 0, 0.5);
+    border: none;
+}
+
+.todoCheck .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.todoCheck input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.todoCheck .checkmark:after {
+    left: 7px;
+    top: 3px;
+    width: 6px;
+    height: 12px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.todoTask {
+    display: flex;
+    gap: 12px;
+}
+
+.todoListSection li button {
+    border: none;
+    background-color: transparent;
+    font-size: 20px;
+    top: 4px;
+    left: 275px;
+    padding: 0px 0.21px 0.21px 0px;
+    gap: 0px;
+    opacity: 0px;
+    color: #494C6B;
+}
+
+.footer {
+    width: 327px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 190px;
+    padding: 15px 0px;
+    border-radius: 12px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 35px 50px -15px #C2C3D680;
+}
+
+.footer button {
+    border: none;
+    background-color: transparent;
+}
+
+.footerButtons {
+     display: flex;
+     gap: 22px;
+}
+
+@media(width >= 1110px) {
+    .container {
+        width: 540px;
+        padding: 0px;
+    }
+
+    .todoForm input {
+        width: 483px;
+    }
+
+    .footer {
+        width: 540px;
+    }
+}
