@@ -50,7 +50,7 @@ export default function TodoApp() {
     <>
       <div className="headerSection">
         <h1>TODO</h1>
-        <img src="public/images/headerLogo.png" alt="" />
+        <img src="/images/headerLogo.png" alt="" />
       </div>
 
       <div className="pageContainer">
@@ -138,7 +138,7 @@ function TodoItem({ task, id, isComplated, deleteTodo, toggleTodoCompletion }) {
       </div>
 
       <button onClick={() => deleteTodo(id)}>
-        <img src="public/images/cross.png" alt="" />
+        <img src="/images/cross.png" alt="" />
       </button>
     </li>
   );

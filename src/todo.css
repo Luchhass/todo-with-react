@@ -62,7 +62,7 @@ body::before {
   left: 0;
   right: 0;
   height: 150px;
-  background-image: url("public/images/headerBackground.png");
+  background-image: url("/images/headerBackground.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
